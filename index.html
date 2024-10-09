@@ -1,0 +1,170 @@
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/en/a/ae/FEU_Roosevelt_Logo.png">
+    <title>Buwan ng Wika Article</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #E8F5E9;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        header {
+            background: #023020;
+            color: #f5b718;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav ul li a {
+            color: #f5b718;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .article-container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .article {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow-y: auto;
+            animation: fadeIn 2s ease-in;
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+        label {
+            display: block;
+            cursor: pointer;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+            color: #000000;
+            border-radius: 4px;
+            text-align: left;
+            position: relative;
+        }
+        label:after {
+            content: '▼';
+            font-size: 1rem;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease-in-out;
+        }
+        input[type="checkbox"]:checked + label:after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+        .content {
+            max-height: 0;
+            overflow-y: auto;
+            transition: max-height 0.3s ease-in-out;
+            padding: 0;
+        }
+        input[type="checkbox"]:checked ~ .content {
+            max-height: none; /* Removes the height restriction */
+            padding: 1rem 0;
+        }
+        article p {
+            margin: 1rem 0;
+            color: #333;
+            font-size: 18px;
+        }
+        footer {
+            background: #023020;
+            color: #f5b718;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .article-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .article {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Buwan ng Wika</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">ARTICLE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="article-container">
+        <div class="article">
+            <input type="checkbox" id="monologo-toggle">
+            <label for="monologo-toggle">Monologo</label>
+            <div class="content">
+                <p></p>
+            </div>
+        </div>
+        <div class="article">
+            <input type="checkbox" id="movers-toggle">
+            <label for="movers-toggle">Movers Limitless</label>
+            <div class="content">
+                <p></p>
+            </div>
+        </div>
+        <div class="article">
+            <input type="checkbox" id="tawag-toggle">
+            <label for="tawag-toggle">Tawag ng Tanghalan</label>
+            <div class="content">
+                <p>Pangatlo sa pinaka importanteng kaganapan na nangyari sa ating Buwan ng Wika sa FEU Roosevelt Cainta ay ang Tawag ng Tanghalan o pag-awit. Ang kaganapang ito ay hindi lamang tungkol sa kumpetisyon, kundi selebrasyon ng ating Wika na naka-batay sa pag-kanta.
+                    Para sa ating tema na "Wikang Mapagpalaya"  ay nabigyan ang mga kahalok ng plataporma upang maipakita nila ang kanilang mga talento sa pag-awit sa harap ng maraming manonood. Pinakita rin ng mga iba't-ibang kahalok ang kahalagaan ng ating mga kanta tungkol sa ating sariling Wika, ginamit nila ito upang ipagmalaki ang ating kultura pagdating sa pag-awit.
+                    Kinatawan rin ito ng mga iba't-ibang baitang upang ipakita ang mga kanilang talento at pagiging tunay na Pilipino.
+                    Nang maganap ang 'tawag ng Tanghalan" sa FEU Roosevelt Cainta, kasama nito ang mga iba't-ibang antas ng mga pagtatanghal ng musika, tulad na dito ang mga klasikong Filipino balada hanggang sa modernong henerasyon ng musika. Ang mga iba't-ibang kalahok ay kumakatawan sa iba't-ibang antas ng baitang ya hinuhukom base sa kanilang klaridad ng boses,
+                    presensya entablado, at sa pangkalahatang pagganap. Isa sa mga nag-pakita ng kanilang husay sa pagganap ay si Elisha Pestaño,
+                    ang kumatawan para sa baitang siyam - Banahaw. Kinanta niya ang "Tagumpay Nating Lahat," isang awit na sumisimbolo ng sama-samang tagumpay ng bawat isa sa pagtitipon na iyon. Ang kanyang pagganap nito ay isang simbolo ng pagkakaisa at tagumpay ng lahat ng kalahok at mga manonood.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>2024 FEU ROOSEVELT</p>
+    </footer>
+</body>
+</html>
+
